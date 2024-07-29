@@ -8,7 +8,7 @@ Snake python é um jogo baseado em uma experiência 2D, que simula uma cobra que
 ## Como rodar o jogo:
 > 1º - É necessário ter uma IDE instalada, como o visual studio code ou o pycharm.
 > >
-> 2º - É necessário instalar o pygame e o python em sua áquina.
+> 2º - É necessário instalar o pygame e o python em sua máquina.
 > >
 > 3 º - Rodar o arquivo main.py
 
@@ -27,7 +27,7 @@ Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para c
 - Rayssa Vitória (rvls)
 
 ## Divisão dos trabalhos:
-- Aigo Alana: Criação de uma tela de menu e de fim de jogo, implementação de coletáveis com o adicional de uma pontuação diferente para cada coletáveis.
+- Aigo Alana: Criação de uma tela de menu e de fim de jogo, implementação de coletáveis com o adicional de uma pontuação diferente para cada coletável.
 - Ismael Álvaro: Identificação e armazenamento dos coletáveis, estruturação dos diretórios, desenvolvimento da classe dos objetos coletáveis e atualização das imagens de Spritesheets.
 - Milla Rwana: desenvolvimento da base do código, modularização e organização do código, implementação da lógica da movimentação da cobrinha.
 - Pedro Henrique: Ajustes para garantir o bom desempenho do jogo, criação da função bomba e ajustes no código principal para integrar essa funcionalidade
@@ -39,9 +39,9 @@ Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para c
 ## Organização do código:
 > Como usamos o conceito de modularização do código, o nosso código foi dividido em 4 módulos:
 
-> - O módulo "functions.py" foi criado para armazenar as funções gerar_bomba, desenhar_bomba, desenhra_cobra, desenhar_pontuacao, selecionar_velocidade e fim_de_jogo:
+> - O módulo "functions.py" foi criado para armazenar as funções gerar_bomba, desenhar_bomba, desenhar_cobra, desenhar_pontuacao, selecionar_velocidade e fim_de_jogo:
   
-    - gerar_bomba(): Gera uma posição aleatória para uma bomba que não colida com a cobra (pixels) ou com a comida (comida_x, comida_y).
+    - gerar_bomba(): Gera uma posição aleatória para uma bomba que não colida com a cobra ou com a comida.
     - desenhar_bomba(): Desenha a bomba na tela na posição especificada com a cor vermelha.
     - desenhar_cobra(): Desenha a cobra na tela com base nas posições de cada pixel da cobra, usando a cor branca.
     - desenhar_pontuacao(): Desenha a pontuação na tela no canto superior esquerdo.
@@ -55,10 +55,9 @@ Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para c
 
 > - O módulo "Settings.py" é a funcao que inicializa o Pygame e faz as configurações principais do jogo, além disso define os caminhos para os diretórios principais, de imagens e sons e faz o carregamento de imagens e definição das cores.
 
-> - O módulo "sprites.py" foi criado para armazenar uma classe, chamada comida e a função update :
+> - O módulo "sprites.py" foi criado para armazenar uma classe chamada comida e a função update :
 
     - Class comida(): Define a classe Comida que herda de pygame.sprite.Sprite. O método __init__ inicializa a comida com base na posição atual da cobra (pixels). Além disso, define diferentes tipos de comida, cada um com uma cor e um valor de pontos, e seleciona um tipo aleatoriamente e associa a cor da comida selecionada a uma sprite_sheet correspondente, e extrai uma imagem da sprite_sheet. É importate citar também que define a imagem inicial da comida e configura sua posição e Garante que a comida não apareça sobre a cobra ao inicializar sua posição.
-
     - update(): Atualiza a imagem da comida e este método é chamado automaticamente em cada frame do jogo.
 
 ## Ferramentas e bibliotecas usadas:
@@ -66,7 +65,6 @@ Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para c
 - Pygame: Usado pra importar configurações próprias de jogo e, assim, facilitar o trabalho do grupo.
 - random : Uma biblioteca nativa do Python que é responsável por facilitar as operações de aleatoriedade, como a geração das frutas e etc.
 - os: Um módulo nativo do Python que fornece uma maneira de interagir com o sistema operacional, incluindo funções para manipulação de arquivos, diretórios e processos, bem como para obter informações sobre o ambiente do sistema. Foi usado no código, principalmente, na parte de settings.
-
 
 ## Conceitos apresentados na disciplina que foram aplicados:
   Utilizamos diversos conceitos enquanto estávamos desenvolvendo o jogo, dentre eles:
