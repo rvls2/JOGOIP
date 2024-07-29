@@ -20,17 +20,21 @@ Para mover a cobrinha, é necessário usar as seguintes teclas:
 Sendo a primeira delas para mover a cobrinha para o lado, a segunda mover para cima, a terceira mover para o outro lado e a quarta para baixo.
 
 ## Equipe:
-- Aigo Alana ()....
+- Aigo Alana (aacl)
 - Ismael Álvaro (ials)
 - Milla Rwana (mras)
 - Pedro Henrique (phss)
 - Rayssa Vitória (rvls)
 
 ## Divisão dos trabalhos:
-.......
+- Aigo Alana: Criação de uma tela de menu e de fim de jogo, implementação de coletáveis com o adicional de uma pontuação diferente para cada coletáveis.
+- Ismael Álvaro: Identificação e armazenamento dos coletáveis, estruturação dos diretórios, desenvolvimento da classe dos objetos coletáveis e atualização das imagens de Spritesheets.
+- Milla Rwana: desenvolvimento da base do código, modularização e organização do código, implementação da lógica da movimentação da cobrinha.
+- Pedro Henrique: Ajustes para garantir o bom desempenho do jogo, criação da função bomba e ajustes no código principal para integrar essa funcionalidade
+- Rayssa Vitória: Aplicação dos sprites e a base do background, correção do tamanho da fonte na tela, testar o jogo para buscar possíveis erros.
 
 ## link para acessar o código:
-......
+- https://github.com/mi18242/JOGOIP
 
 ## Organização do código:
 > Como usamos o conceito de modularização do código, o nosso código foi dividido em 4 módulos:
