@@ -1,6 +1,6 @@
 import pygame
 import random
-from settings import *
+from settings import * m
 
 def gerar_bomba(pixels, comida_x, comida_y):
     bomba_x = round(random.randrange(0, largura - tamanho_quadrado) / 10.0) * 10.0
