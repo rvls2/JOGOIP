@@ -3,11 +3,11 @@ import random
 from settings import *
 
 def gerar_bomba(pixels, comida_x, comida_y):
-    bomba_x = round(random.randrange(127, largura - 128 - tamanho_quadrado) / 64.0) * 64.0
-    bomba_y = round(random.randrange(63, altura - 64 - tamanho_quadrado) / 64.0) * 64.0
+    bomba_x = round(random.randrange(127, largura - 128 - tamanho_quadrado) / 32.0) * 32.0
+    bomba_y = round(random.randrange(63, altura - 64 - tamanho_quadrado) / 32.0) * 32.0
     while ([bomba_x, bomba_y] in pixels) or ([bomba_x, bomba_y] == [comida_x, comida_y]):
-        bomba_x = round(random.randrange(127, largura - 128 - tamanho_quadrado) / 64.0) * 64.0
-        bomba_y = round(random.randrange(63, altura - 64 - tamanho_quadrado) / 64.0) * 64.0
+        bomba_x = round(random.randrange(127, largura - 128 - tamanho_quadrado) / 32.0) * 32.0
+        bomba_y = round(random.randrange(63, altura - 64 - tamanho_quadrado) / 32.0) * 32.0
     return bomba_x, bomba_y
 
 def desenhar_bomba(tamanho, bomba_x, bomba_y):
