@@ -4,8 +4,8 @@ import os
 # Configurações
 pygame.init()
 largura, altura = 1280, 640
-tamanho_quadrado = 64
-velocidade_jogo = 10
+tamanho_quadrado = 32
+velocidade_jogo = 15
 
 # Tela
 tela = pygame.display.set_mode((largura, altura))
