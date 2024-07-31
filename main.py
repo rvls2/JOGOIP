@@ -21,7 +21,7 @@ def rodar_jogo():
     bomba_x, bomba_y = gerar_bomba(pixels, comida.comida_x, comida.comida_y)
 
     while not fim_jogo:
-        tela.fill(preta)
+        tela.blit(bg, [0,0])
         for evento in pygame.event.get():
             if evento.type == pygame.QUIT:
                 fim_jogo = True
@@ -31,7 +31,7 @@ def rodar_jogo():
         x += velocidade_x
         y += velocidade_y
 
-        if x < 0 or x >= largura or y < 0 or y >= altura:
+        if x < 128 or x >= largura - 128 or y < 64 or y >= altura - 64:
             fim_jogo = True
 
         desenhar_bomba(tamanho_quadrado, bomba_x, bomba_y)
@@ -48,7 +48,7 @@ def rodar_jogo():
         pygame.display.update()
 
         if pygame.Rect.colliderect(comida.rect, [pixels[-1][0], pixels[-1][1], tamanho_quadrado, tamanho_quadrado]):
-            tamanho_cobra += 4
+            tamanho_cobra += 1
             if comida.tipo_comida['cor'] == verde:
                 capturas_verdes += 1
             elif comida.tipo_comida['cor'] == azul:
