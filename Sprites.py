@@ -19,11 +19,11 @@ class Comida(pygame.sprite.Sprite):
             amarelo: sprite_sheet_comida3
         }
         sprite_sheet = sprite_sheets[self.tipo_comida["cor"]]
-        tamanho_por_imagem = 10
+        tamanho_por_imagem = 64
         self.imagens_comida = []
         for i in range(1):
             img = sprite_sheet.subsurface((i*tamanho_por_imagem, 0), (tamanho_por_imagem, tamanho_por_imagem))
-            img = pygame.transform.scale(img, (tamanho_por_imagem*3, tamanho_por_imagem*3))
+            img = pygame.transform.scale(img, (tamanho_por_imagem*1, tamanho_por_imagem*1))
             self.imagens_comida.append(img)
 
         self.index_lista = 0
@@ -31,12 +31,12 @@ class Comida(pygame.sprite.Sprite):
 
         retangulos_cobra = [[pixel[0], pixel[1], tamanho_quadrado, tamanho_quadrado] for pixel in pixels]
         self.rect = self.image.get_rect()
-        self.comida_x = round(random.randrange(0, largura - tamanho_quadrado) / 10.0) * 10.0
-        self.comida_y = round(random.randrange(0, altura - tamanho_quadrado) / 10.0) * 10.0
+        self.comida_x = round(random.randrange(128, largura - 128 - tamanho_quadrado) / 64.0) * 64.0
+        self.comida_y = round(random.randrange(104, altura - 104 - tamanho_quadrado) / 64.0) * 64.0
         self.rect.center = (self.comida_x, self.comida_y)
         while self.rect.collidelist(retangulos_cobra) != -1:
-            self.comida_x = round(random.randrange(0, largura - tamanho_quadrado) / 10.0) * 10.0
-            self.comida_y = round(random.randrange(0, altura - tamanho_quadrado) / 10.0) * 10.0
+            self.comida_x = round(random.randrange(128, largura - 128 - tamanho_quadrado) / 64.0) * 64.0
+            self.comida_y = round(random.randrange(104, altura - 104 - tamanho_quadrado) / 64.0) * 64.0
             self.rect.center = (self.comida_x, self.comida_y)
 
     def update(self):
