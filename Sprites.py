@@ -31,12 +31,12 @@ class Comida(pygame.sprite.Sprite):
 
         retangulos_cobra = [[pixel[0], pixel[1], tamanho_quadrado, tamanho_quadrado] for pixel in pixels]
         self.rect = self.image.get_rect()
-        self.comida_x = round(random.randrange(128, largura - 128 - tamanho_quadrado) / 64.0) * 64.0
-        self.comida_y = round(random.randrange(104, altura - 104 - tamanho_quadrado) / 64.0) * 64.0
+        self.comida_x = round(random.randrange(127, largura - 128 - tamanho_quadrado) / 32.0) * 32.0
+        self.comida_y = round(random.randrange(103, altura - 104 - tamanho_quadrado) / 32.0) * 32.0
         self.rect.center = (self.comida_x, self.comida_y)
         while self.rect.collidelist(retangulos_cobra) != -1:
-            self.comida_x = round(random.randrange(128, largura - 128 - tamanho_quadrado) / 64.0) * 64.0
-            self.comida_y = round(random.randrange(104, altura - 104 - tamanho_quadrado) / 64.0) * 64.0
+            self.comida_x = round(random.randrange(127, largura - 128 - tamanho_quadrado) / 32.0) * 32.0
+            self.comida_y = round(random.randrange(103, altura - 104 - tamanho_quadrado) / 32.0) * 32.0
             self.rect.center = (self.comida_x, self.comida_y)
 
     def update(self):
