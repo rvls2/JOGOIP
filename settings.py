@@ -1,10 +1,12 @@
+# settings.py
+
 import pygame
 import os
 
 # Configurações
 pygame.init()
-largura, altura = 800, 600
-tamanho_quadrado = 10
+largura, altura = 1280, 640
+tamanho_quadrado = 32
 velocidade_jogo = 15
 
 # Tela
@@ -21,6 +23,8 @@ diretorio_sons = os.path.join(diretorio_principal, 'sons')
 sprite_sheet_comida1 = pygame.image.load(os.path.join(diretorio_imagens, 'comida1.png')).convert_alpha()
 sprite_sheet_comida2 = pygame.image.load(os.path.join(diretorio_imagens, 'comida2.png')).convert_alpha()
 sprite_sheet_comida3 = pygame.image.load(os.path.join(diretorio_imagens, 'comida3.png')).convert_alpha()
+sprite_sheet_bomba = pygame.image.load(os.path.join(diretorio_imagens, 'bomba.png')).convert_alpha()
+bg = pygame.image.load(os.path.join(diretorio_imagens, 'bg.png')).convert_alpha()
 
 # Cores
 preta = (0, 0, 0)
